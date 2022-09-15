@@ -59,7 +59,7 @@ fetchData = function(){
                         break;
                     }
                 }
-                if(`${data[0].meanings[i].definitions[j].definition}` != ""){
+                if(`${Definition}` != ""){
                     break;
                 }
             }
@@ -72,7 +72,7 @@ fetchData = function(){
                         break;
                     }
                 }
-                if(`${data[0].meanings[i].definitions[j].example}` != ""){
+                if(`${Example}` != ""){
                     break;
                 }
             }
