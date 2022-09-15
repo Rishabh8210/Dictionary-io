@@ -59,6 +59,9 @@ fetchData = function(){
                         break;
                     }
                 }
+                if(`${data[0].meanings[i].definitions[j].definition}` != ""){
+                    break;
+                }
             }
 
             // For input Example
@@ -68,6 +71,9 @@ fetchData = function(){
                         Example = `${data[0].meanings[i].definitions[j].example}`;
                         break;
                     }
+                }
+                if(`${data[0].meanings[i].definitions[j].example}` != ""){
+                    break;
                 }
             }
 
