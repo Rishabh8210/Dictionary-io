@@ -1,0 +1,251 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+.container{
+    display: flex;
+    background-color: darkcyan;
+    justify-content: center;
+    height: calc(100vh);
+    align-items: center;
+}
+.items{
+    background-color: white;
+    width: 700px;
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.items .header{
+    position: relative;
+    
+}
+.items .header p{
+    display: inline-block;
+    font-size: 45px;
+    color: darkcyan;
+    font-weight: 800;
+}
+.items .header span{
+    
+    font-size: 75px;
+    color: rgb(252, 89, 1);
+    font-weight: 800;
+}
+.items .header p::after{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 250px;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%);
+    border-bottom: 5px double red;
+}
+.mainContent{
+    padding: 20px;
+}
+.mainContent input[type="text"]{
+    width: 500px;
+    height: 40px;
+    font-size: 18px;
+    padding-left: 25px;
+    border-radius: 14px;
+    border: 1px solid grey;
+}
+.mainContent input[type="text"]::placeholder{
+    padding-left: 15px;
+    color: rgb(163, 160, 160);
+}
+.button{
+    padding: 10px;
+}
+.button button{
+    width: 120px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bolder;
+    border: 1px solid grey;
+    background-color: rgb(252, 89, 1);
+    cursor: pointer;
+}
+.button button:hover{
+    background-color: white;
+    color: rgb(252, 89, 1);
+    border: 1px solid rgb(252, 89, 1);
+}
+.result{
+    width: 550px;
+    padding: 20px;
+}
+.result .word h2{
+    font-size:30px;
+    font-weight:800;
+
+    color: red;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 5px 0px;
+}
+.result .details p{
+    font-size:16px;
+    font-weight: 600;
+    padding: 4px 0px;
+    font-family: 'Ubuntu', sans-serif;
+
+    display: inline-block;
+}
+.result .wordmeaning{
+    margin-top: 25px;
+    padding: 5px 0px;
+
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 20px;
+    font-size: large;
+    font-weight: bolder;
+}
+.result .example{
+    font-size: medium;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    padding: 5px 0px;
+
+}
+
+
+@media (max-width:800px){
+    .items{
+        width: 500px;
+        border-radius: 12px;
+    }
+    .items .header p{
+        font-size: 30px;
+    }
+    .items .header span{
+        font-size: 50px;
+    }
+    .items .header p::after{
+        width: 180px;
+    }
+    .mainContent input[type="text"]{
+        width: 300px;
+        font-size: 16px;
+        padding-left: 10px;
+    }
+    .button{
+        padding: 0px;
+    }
+    .button button{
+        width: 100px;
+        height: 27px;
+        font-size: 18px;
+        border-radius: 15px;
+    }
+    .result{
+        width: 350px;
+        padding: 12px;
+    }
+    .result .word h2{
+        font-size:25px;
+        font-weight:800;
+        padding: 3px 0px;
+    }
+    .result .details p{
+        font-size:14px;
+    }
+    .result .wordmeaning{
+        margin-top: 5px;
+        padding: 5px 0px;
+        margin-bottom: 5px;
+    }
+    .result .example{
+        font-size: 14px;    
+        padding: 6px 0px;
+    }
+}
+@media (max-width:600px){
+    .items{
+        width: 400px;
+        border-radius: 14px;
+
+    }
+    .items .header p{
+        font-size: 35px;
+    }
+    .items .header span{
+        font-size: 50px;
+    }
+    .items .header p::after{
+        width: 190px;
+    }
+    .mainContent input[type="text"]{
+        width: 300px;
+        font-size: 16px;
+        padding-left: 20px;
+    }
+    .result{
+        width: 350px;
+        padding: 15px;
+    }
+}
+
+
+@media (max-width:450px){
+    .items{
+        width: 300px;
+        border-radius: 12px;
+    }
+    .items .header p{
+        font-size: 25px;
+    }
+    .items .header span{
+        font-size: 35px;
+    }
+    .items .header p::after{
+        width: 150px;
+    }
+    .mainContent{
+        padding: 10px;
+    }
+    .mainContent input[type="text"]{
+        width: 200px;
+        height: 30px;
+        font-size: 14px;
+        padding-left: 5px;
+    }
+    .result{
+        width: 280px;
+        padding: 0 5pxpx;
+    }
+    .result .word h2{
+        font-size:22px;
+    }
+}
+@media (max-width:340px){
+    .items{
+        width: 250px;
+    }
+
+    .result{
+        width: 250px;
+        padding: 0 5pxpx;
+    }
+    .result .word h2{
+        font-size:18px;
+        padding: 0px 5px;
+    }
+    .result p{
+        font-size: 12px;
+    }
+}
+@media (max-width:260px){
+    *{
+        display: none;
+    }
+
+}
