@@ -125,6 +125,10 @@
 
 
 @media (max-width:800px){
+    *{
+        word-spacing: 0px;
+        letter-spacing: 0px;
+    }
     .items{
         width: 500px;
         border-radius: 12px;
@@ -175,6 +179,10 @@
     }
 }
 @media (max-width:600px){
+    *{
+        word-spacing: 0px;
+        letter-spacing: 0px;
+    }
     .items{
         width: 400px;
         border-radius: 14px;
@@ -202,6 +210,10 @@
 
 
 @media (max-width:450px){
+    *{
+        word-spacing: 0px;
+        letter-spacing: 0px;
+    }
     .items{
         width: 300px;
         border-radius: 12px;
