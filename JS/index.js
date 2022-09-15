@@ -59,11 +59,12 @@ fetchData = function(){
                         break;
                     }
                 }
-                if(`${Definition}` != ""){
+                if(Definition != ""){
                     break;
                 }
             }
-
+            console.log(typeof Definition);
+            console.log(typeof `${Definition}`);
             // For input Example
             for(i = 0; i < data[0].meanings.length; i++){
                 for(j = 0; j< data[0].meanings[i].definitions.length; j++){
@@ -72,7 +73,7 @@ fetchData = function(){
                         break;
                     }
                 }
-                if(`${Example}` != ""){
+                if(Example != ""){
                     break;
                 }
             }
