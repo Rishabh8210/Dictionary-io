@@ -39,8 +39,17 @@ fetchData = function(){
             </div><div class="example">
             <P>Example : <br>${data[0].meanings[0].definitions[0].example || ""}</P>
             </div>`;
-            sound.setAttribute("src",`${data[0].phonetics[0].audio}`);
-            console.log(sound)
+            for(i = 0; i <= data[0].phonetics.length; i++)
+            {
+                temp = `${data[0].phonetics[i].audio}`;
+                if(temp != ""){
+                    sound.setAttribute("src",`${data[0].phonetics[i].audio}`);
+                    break;
+                }
+            }
+            // // console.log(data[0].phonetics.length);
+            // // sound.setAttribute("src",`${data[0].phonetics[1].audio}`);
+            // console.log(sound)
         }
     else
     console.log("Kuch toh gadbad hai");
