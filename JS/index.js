@@ -27,14 +27,14 @@ fetchData = function(){
             let data = JSON.parse(this.responseText);
             // console.log(obj);
 
-            let phoneticsText = "Not Found";
-            let partofspeech = "Not Found";
-            let Definition = "Not Found";
-            let Example = "Not Found";
+            let phoneticsText = "";
+            let partofspeech = "";
+            let Definition = "";
+            let Example = "";
 
             // For Phonetics Text
             for(i = 0; i < data[0].phonetics.length; i++){
-                if(`${data[0].phonetics[i].text}` != "Not Found"){
+                if(`${data[0].phonetics[i].text}` != ""){
                     phoneticsText = `${data[0].phonetics[i].text}`;
                     break;
                 }
@@ -42,7 +42,7 @@ fetchData = function(){
 
             // For PartOfSpeech 
             for(i = 0; i < data[0].meanings.length; i++){
-                if(`${data[0].meanings[i].partOfSpeech}` != "Not Found"){
+                if(`${data[0].meanings[i].partOfSpeech}` != ""){
                     partofspeech = `${data[0].meanings[i].partOfSpeech}`;
                     break;
                 }
@@ -54,7 +54,7 @@ fetchData = function(){
             {
                 for(j = 0; j < data[0].meanings[i].definitions.length; j++)
                 {
-                    if(`${data[0].meanings[i].definitions[j].definition}` != "Not Found"){
+                    if(`${data[0].meanings[i].definitions[j].definition}` != ""){
                         Definition = `${data[0].meanings[i].definitions[j].definition}`;
                         break;
                     }
@@ -64,7 +64,7 @@ fetchData = function(){
             // For input Example
             for(i = 0; i < data[0].meanings.length; i++){
                 for(j = 0; j< data[0].meanings[i].definitions.length; j++){
-                    if(`${data[0].meanings[i].definitions[j].example}` != "Not Found"){
+                    if(`${data[0].meanings[i].definitions[j].example}` != ""){
                         Example = `${data[0].meanings[i].definitions[j].example}`;
                         break;
                     }
