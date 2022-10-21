@@ -90,7 +90,7 @@ fetchData = function(){
 
             result.innerHTML = `<div class="word">
             <h2>${input}</h2>
-            <i class="fa-sharp fa-solid fa-volume-high" onclick ="playSound()"></i>
+            <i class="fa-sharp fa-solid fa-volume-high" onclick ="sound.play()"></i>
             </div>
             <div class="details">
             <p>${phoneticsText}</p>
@@ -114,6 +114,3 @@ xhr.send();
 }
 btn.addEventListener("click",fetchData);
 
-function playSound(){
-    sound.play();
-}
